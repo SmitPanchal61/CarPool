@@ -1,0 +1,102 @@
+
+body {
+    background-color: #F7F9FB;
+    font-family: 'Cinzel', serif;
+}
+
+.navbar {
+    background-color: #31708E;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navButtons {
+    margin-left: auto;
+}
+
+.regButtons {
+    border: 2px solid #F7F9FB;
+    color: #F7F9FB;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.regButtons:hover {
+    border: 2px solid #F7F9FB;
+    background-color: #479761;
+    color: #F7F9FB;
+}
+
+.loginLink {
+    margin-right: 10px;
+    color: #F7F9FB;
+    text-decoration: none;
+}
+
+.loginLink:hover {
+    color: #F7F9FB;
+}
+
+.userProfile {
+    margin-left: 58rem;
+}
+
+.carpools {
+    border: 2px solid #31708E;
+    margin: 15px 5px !important; 
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.carpools:hover {
+    border: 2px solid #479761;
+}
+
+.carpoolPos {
+    display: inline-block;
+    margin: 5px 0px;
+    font-family: 'Cinzel', serif !important;
+    font-weight: bold !important;
+    color: #31708E;
+    font-size: 1.3rem;
+}
+
+.carpoolInfo {
+    display:block;
+    margin-top: 5px;
+}
+
+.carpoolbtn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.btn {
+    background-color: #479761 !important;
+    color: #F7F9FB !important;
+    padding: 8px 18px !important;
+    border: none !important;
+    border: 2px solid #31708E !important;
+    border-radius: 4px;
+    cursor: pointer;
+    float:left;
+    margin: 25px 8px !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: bold !important;
+}
+.btn:hover {
+    background-color: #F7F9FB !important;
+    color: #31708E !important;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}

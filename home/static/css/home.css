@@ -1,0 +1,182 @@
+/* fonts
+
+font-family: 'Cinzel', serif;
+*/
+
+body {
+    background-color: #F7F9FB;
+    font-family: 'Cinzel', serif;
+}
+
+.homeContainer {
+    margin: 8% 0;
+}
+
+.homeHeading {
+    text-align: center;
+    margin-bottom: 4%;
+    color: #31708E;
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
+    font-size: 2.8rem;
+}
+
+.homeForm {
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.formFields {
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: bold;
+    margin: 0 10px 50px 0;
+    text-align: right;
+    color: #31708E;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+}
+
+.textInput {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 45%;
+    height: 50px;
+    padding: 10px;
+    margin-left: 2%;
+}
+
+.homeLink {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #31708E;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+}
+
+.navbar {
+    background-color: #31708E;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+}
+
+.formButton {
+    border: 2px solid #F7F9FB;
+    color: #F7F9FB;
+    background-color: #479761;
+    font-weight: bold;
+}
+
+.formButton:hover {
+    border: 2px solid #31708E;
+    color: #31708E;
+    background-color: #F7F9FB;
+}
+
+.navButtons {
+    margin-left: auto;
+}
+
+.regButtons {
+    border: 2px solid #F7F9FB;
+    color: #F7F9FB;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.regButtons:hover {
+    border: 2px solid #F7F9FB;
+    background-color: #479761;
+    color: #F7F9FB;
+}
+
+.loginLink {
+    margin-right: 10px;
+    color: #F7F9FB;
+    text-decoration: none;
+}
+
+.loginLink:hover {
+    color: #F7F9FB;
+}
+
+.carpoolInfoHead {
+    font-weight: bolder;
+    color: #31708E;
+    padding-left: 55px;
+}
+
+.carpoolInfo {
+    margin: 40px;
+}
+
+.carpoolInfoImg {
+    position: relative;
+    left: 23%;
+    width: 60%;
+    border: 2px solid #479761;
+    border-radius: 15px;
+}
+
+.carpoolInfoText {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: justify;
+    color: #31708E;
+    padding: 55px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 1rem 2em;
+}
+
+.footerText {
+    font-weight: bolder;
+    color: #479761 !important;
+}
+
+.featureHead {
+    font-weight: bolder;
+    color: #31708E;
+}
+
+.featureTitle {
+    font-weight: bold;
+    color: #31708E;
+}
+
+.featurePara {
+    color: #31708E;
+}
+
+.mainform {
+    background-image: url('/static/images/carpoolBg (5).png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 40% 99%;
+    background-size: 80rem;
+}
+
+.userProfile {
+    margin-left: 58rem;
+}
+
+.carousel .carousel-item {
+    height: 450px;
+}
+  
+.carousel-item img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+}

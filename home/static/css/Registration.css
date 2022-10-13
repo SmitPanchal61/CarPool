@@ -1,0 +1,194 @@
+*{box-sizing: border-box;
+}
+
+body {
+    background-color: #F7F9FB;
+    font-family: 'Cinzel', serif;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 45%;
+    padding: 12px;
+    border: 1px solid #31708E;
+    border-radius: 4px;
+    resize: vertical;
+}
+textarea{
+    width:45%;
+    padding: 12px;
+    border: 1px solid #31708E;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=radio],input[type=checkbox]{
+    width: 1%;
+    padding-left: 0%;
+    border: 1px solid #31708E;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: 'Cinzel', serif !important;
+    color: #31708E;
+}
+h1{
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem !important;
+    font-weight: bolder !important;
+    color: #31708E !important;
+    text-align: center;
+}
+h3{
+    font-family: 'Cinzel', serif;
+    font-weight: bold !important;
+    color: #31708E !important;
+}
+label{
+    padding: 12px 12px 12px 0;
+    margin-top: 30px;
+    display: inline-block;
+    color: #31708E;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.btn {
+    background-color: #479761 !important;
+    color: #F7F9FB !important;
+    padding: 8px 18px !important;
+    border: none !important;
+    border: 2px solid #31708E !important;
+    border-radius: 4px;
+    cursor: pointer;
+    float:left;
+    margin: 25px 8px !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: bold !important;
+}
+.btn:hover {
+    background-color: #F7F9FB !important;
+    color: #31708E !important;
+}
+.main-cont{
+    background-color:#F7F9FB;
+    padding: 20px 50px !important;
+}
+.col-10{
+    float: left;
+    width:10%;
+    margin-top: 6px;
+}
+.col-90{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .col-10,.col-90,input[type=submit]{
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.carpools {
+    border: 2px solid #31708E;
+    margin: 15px 5px !important; 
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.carpools:hover {
+    border: 2px solid #479761;
+}
+
+.carpoolPos {
+    display: inline-block;
+    margin: 5px 0px;
+    font-family: 'Cinzel', serif !important;
+    font-weight: bold !important;
+    color: #31708E;
+    font-size: 1.4rem;
+}
+
+.carpoolInfo {
+    display:block;
+    margin-top: 5px;
+}
+
+.carpoolbtn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.deleteCarpool {
+    background-color: red !important;
+    color: #F7F9FB !important;
+    padding: 8px 18px !important;
+    border: none !important;
+    border: 2px solid red !important;
+    border-radius: 4px;
+    cursor: pointer;
+    float:left;
+    margin: 25px 8px !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: bold !important;
+}
+
+.deleteCarpool:hover {
+    background-color: #F7F9FB !important;
+    color: red !important;
+}
+
+.fcarpoolInfo {
+    display: inline-block;
+    margin-right: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.noResultsDiv {
+    text-align: center;
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.carpoolDsgn {
+    position: absolute;
+    right: 125px;
+    top: 250px;
+}
+
+.carpoolDsgnImg {
+    height: 380px;
+}
+
+.profileVals {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.carpoolOptionImg {
+    height: 105px;
+}
+
+.deletebtn {
+    background-color: red !important;
+    border: 2px solid red !important;
+}
+
+.deletebtn:hover {
+    color: red !important;
+}
+
+.addInfo {
+    margin-left: 40px;
+    font-size: 1rem;
+}

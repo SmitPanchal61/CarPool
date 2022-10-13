@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <title>SIGNUP LOGIN FORM</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="modalForm">
+            <div class="actionBtns">
+                <button class="actionBtn signupBtn">Signup</button>
+                <button class="actionBtn loginBtn">Login</button>
+                <button class="moveBtn">Signup</button>
+            </div>
+            <div class="userform">
+                <form action="/register" method="POST" class="form signup signupForm">
+                    {% csrf_token%}
+                    <div class="inputGrp">
+                        <input type="text" name="username" placeholder="Username" autocomplete="off">
+                    </div>
+                    <div class="inputGrp">
+                        <input type="text" name="first_name" placeholder="First name" autocomplete="off">
+                    </div>
+                    <div class="inputGrp">
+                        <input type="text" name="last_name" placeholder="Last name" autocomplete="off">
+                    </div>
+                    <div class="inputGrp">
+                        <input type="email" name="email" placeholder="Email address" autocomplete="off">
+                    </div>
+                    <div class="inputGrp">
+                        <input type="password" name="password" placeholder="Create password" autocomplete="off">
+                    </div>
+                    <div class="inputGrp">
+                        <input type="password" name="confirm_password" placeholder="Confirm password" autocomplete="off">
+                    </div>
+                    <button type="submit" class="submitBtn">Signup</button> 
+                </form>
+
+                <form action="/login_user" method="POST" class="form login">
+                    {% csrf_token%}
+                    <div class="inputGrp">
+                        <input type="text" name="username" placeholder="Username" autocomplete="off">
+                    </div>
+                    <div class="inputGrp">
+                        <input type="password" name="password" placeholder="Password" autocomplete="off">
+                    </div>
+                    <button type="submit" class="submitBtn">Login</button> 
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

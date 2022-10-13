@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registaration Form</title>
+        <link rel="stylesheet" href="{% static 'css/Registration.css' %}">
+        
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    </head>
+       
+    <body>
+        <div class="container-fluid main-cont">
+            <nav class="navbar navbar-expand-lg">
+                <h1 class="navbar-brand">Info</h1>
+                <div class="ms-auto">
+                    <a href="tel:{{ sortedUserData.mobile }}" class="btn my-2 my-sm-0">Contact</a>
+                    <a class="btn my-2 my-sm-0" href="/user_profile">Profile</a>
+                </div>
+              </nav>
+              <hr>
+              {% for x in carpoolInfo %}
+                    <div class="row">
+                        <div class="col-12 carpools">
+                            <h3>Car Details</h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="from">From:</label>
+                                        <p class="fcarpoolInfo" id="from">{{ x.start }}</p>
+                                    </td>
+                                    <td>
+                                        <label for="to">To:</label>
+                                        <p class="fcarpoolInfo" id="to">{{ x.to }}</p>
+                                    </td>
+                                    <td>
+                                        <label for="carNo">Car Number:</label>
+                                        <p class="fcarpoolInfo" id="carNo">{{ x.carNo }}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="brand">Car Brand:</label>
+                                        <p class="fcarpoolInfo" id="brand">{{ x.brand }}</p>
+                                    </td>
+                                    <td>
+                                        <label for="color">Car Color:</label>
+                                        <p class="fcarpoolInfo" id="color">{{ x.color }}</p>
+                                    </td>
+                                    <td>
+                                        <label for="price">Fare:</label>
+                                        <p class="fcarpoolInfo" id="price">{{ x.price }} Rs</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <h3>Driver Details</h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="fullname">Name:</label>
+                                        <p class="fcarpoolInfo" id="fullname">{{ sortedUserData.firstname }} {{ sortedUserData.lastname }}</p>
+                                    </td>
+                                    <td>
+
+                                        <label for="email">Email:</label>
+                                        <p class="fcarpoolInfo" id="email">{{ sortedUserData.email }}</p>
+                                    </td>
+                                    <td>
+
+                                        <label for="mobile">Mobile:</label>
+                                        <p class="fcarpoolInfo" id="mobile">{{ sortedUserData.mobile }}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        <label for="gender">Gender:</label>
+                                        <p class="fcarpoolInfo" id="gender">{{ sortedUserData.gender }}</p>
+                                    </td>
+                                    <td>
+
+                                        <label for="drivelic">drivelic:</label>
+                                        <p class="fcarpoolInfo" id="drivelic">{{ sortedUserData.drivelic }}</p>
+                                    </td>
+                                    <td>
+
+                                        <label for="address">address:</label>
+                                        <p class="fcarpoolInfo" id="address">{{ sortedUserData.address }} , {{ sortedUserData.pin }}</p>
+                                    </td>
+                                </tr>
+                                </table>
+                        </div>
+                    </div>
+            {% endfor %}
+
+
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+</html>

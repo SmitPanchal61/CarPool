@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registaration Form</title>
+        <link rel="stylesheet" href="{% static 'css/Registration.css' %}">
+        
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    </head>
+       
+    <body>
+        <div class="container-fluid main-cont">
+            <nav class="navbar navbar-expand-lg">
+                <h1 class="navbar-brand">Your Carpools</h1>
+                <div class="ms-auto">
+                    <a class="btn my-2 my-sm-0" href="/user_profile">Profile</a>
+                    <a class="btn my-2 my-sm-0" href="/home">Home</a>
+                </div>
+              </nav>
+              <hr>
+            <div class="carpoolDsgn">
+                <img class="carpoolDsgnImg" src="/static/images/carpoolpagedesign.png" alt="map">
+            </div>
+            <form action="/carpools" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-10">
+                    <h3>Create a Carpool</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="from">From:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="from" name="start" placeholder="Starting From">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="to">To:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="to" name="to" placeholder="Your Destination">
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-10">
+                    <label for="date">Date:</label>
+                </div>
+                <div class="col-90">
+                    <input type="date" id="date" name="poolDate" placeholder="Date of Carpool">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="time">Time:</label>
+                </div>
+                <div class="col-90">
+                    <input type="time" id="time" name="poolTime" placeholder="Time of Carpool">
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-10">
+                    <label for="brand">Car Brand:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="brand" name="brand" placeholder="Maruti , Hyundai etc ..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="carNo">Car Number:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="carNo" name="carNo" placeholder="Car Number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="color" required>Car Color:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="color" name="color" placeholder="Your Car Color">
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary profileBtn">Create</button>
+                </div>
+            </div>
+            
+            </form>
+            
+            <hr>
+            
+            
+            <div class="row">
+                <div class="col-10">
+                    <h3>Your Carpools</h3>
+                </div>
+            </div>
+            {% for x in carpoolData %}
+                <div class="row">
+                    <div class="col-12 carpools">
+                        <img class="carpoolOptionImg" src="/static/images/fullcarpoolimg.png" alt="carpool">
+                        <p class="carpoolPos" >{{ x.start }}</p>
+                        <p class="carpoolPos" >➡️</p>
+                        <p class="carpoolPos" >{{ x.to }}</p>
+                        <p class="carpoolPos addInfo" >Fare: {{ x.price }} Rs</p>
+                        <form action="/{{ x.id }}" method="post">
+                            {% csrf_token %}
+                            <button type="submit"  class="btn btn-primary profileBtn my-2 my-sm-6 carpoolbtn">Open</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+</html>

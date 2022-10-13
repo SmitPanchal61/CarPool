@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registaration Form</title>
+        <link rel="stylesheet" href="{% static 'css/Registration.css' %}">
+        
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    </head>
+       
+    <body>
+        <div class="container-fluid main-cont">
+            <nav class="navbar navbar-expand-lg">
+                <h1 class="navbar-brand">User Profile</h1>
+                <div class="ms-auto">
+                    <a class="btn my-2 my-sm-0" href="/carpools">Your Carpools</a>
+                    <a class="btn my-2 my-sm-0" href="/home">Home</a>
+                </div>
+              </nav>
+              <hr>
+                <div class="carpoolDsgn">
+                    <img class="carpoolDsgnImg" src="/static/images/userpagedesign.png" alt="map">
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="fname">First Name: <span class="profileVals">{{ userData.firstname }}</span></label>
+                    </div>
+                    <div class="col-6">
+                        <label for="fname">Last Name: <span class="profileVals">{{ userData.lastname }}</span></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="fname">Email: <span class="profileVals">{{ userData.email }}</span></label>
+                    </div>
+                    <div class="col-6">
+                        <label for="fname">Mobile: <span class="profileVals">{{ userData.mobile }}</span></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="fname">Gender: <span class="profileVals">{{ userData.gender }}</span></label>
+                    </div>
+                    <div class="col-6">
+                        <label for="fname">Date of Birth: <span class="profileVals">{{ userData.dob }}</span></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="fname">Address: <span class="profileVals">{{ userData.address }}</span></label>
+                    </div>
+                    <div class="col-6">
+                        <label for="fname">Area Pin: <span class="profileVals">{{ userData.pin }}</span></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        <label for="fname">Driving License No.: <span class="profileVals">{{ userData.drivelic }}</span></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <form action="/update_profile" method="post">
+                            {% csrf_token %}
+                            <button type="submit" action="/update_profile" class="btn btn-primary profileBtn">Edit Profile</button>
+                        </form>
+                    </div>
+                </div>  
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+</html>
