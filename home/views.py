@@ -1,3 +1,5 @@
+from datetime import date, datetime
+from multiprocessing import pool
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
@@ -7,6 +9,7 @@ from django.conf import settings
 from geopy.geocoders import Nominatim
 from geopy import distance
 from django.contrib.auth.decorators import login_required
+from datetime import datetime
 
 # Create your views here.
 
@@ -138,6 +141,8 @@ def carpools(request):
     if request.method == 'POST':
         start = request.POST['start']
         to = request.POST['to']
+        poolDate = request.POST['poolDate']
+        poolTime = request.POST['poolTime']
         brand = request.POST['brand']
         carNo = request.POST['carNo']
         color = request.POST['color']
@@ -161,7 +166,7 @@ def carpools(request):
         else:
             price = (((travelDist/milage)*petrol)*0.25)+mnt
         
-        carpoolInfo = userCarpools(start=start , to=to , brand=brand , carNo=carNo , price=price ,  color=color , user_id=active_user_id)
+        carpoolInfo = userCarpools(start=start , to=to , poolDate=poolDate , poolTime=poolTime , brand=brand , carNo=carNo , price=price ,  color=color , user_id=active_user_id)
         carpoolInfo.save()
 
     carpoolData = userCarpools.objects.filter(user_id=active_user_id).values()

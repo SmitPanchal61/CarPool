@@ -26,6 +26,8 @@ class userInfo(models.Model):
 class userCarpools(models.Model):
     start = models.CharField(max_length=90)
     to = models.CharField(max_length=90)
+    poolDate = models.DateField(default=datetime.date.today)
+    poolTime = models.TimeField(default=datetime.time)
     brand = models.TextField()
     carNo = models.TextField(max_length=10)
     price = models.IntegerField(default=0)
