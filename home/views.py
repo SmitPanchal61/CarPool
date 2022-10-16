@@ -161,8 +161,10 @@ def carpools(request):
         petrol = 105
         mnt = 35
 
-        if travelDist<=20:
+        if travelDist<=10:
             price = 50
+        elif travelDist<=20 and travelDist>10:
+            price = 70
         else:
             price = (((travelDist/milage)*petrol)*0.25)+mnt
         

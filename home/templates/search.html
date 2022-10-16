@@ -32,6 +32,7 @@
                                 <p class="carpoolPos" >{{ x.start }}</p>
                                 <p class="carpoolPos" >➡️</p>
                                 <p class="carpoolPos" >{{ x.to }}</p>
+                                <p class="carpoolPos addInfo" >Fare: {{ x.price }} Rs</p>
                                 <form action="/search/{{ x.id }}" method="post">
                                     {% csrf_token %}
                                     <button type="submit"  class="btn btn-primary profileBtn my-2 my-sm-6 carpoolbtn">Open</button>
